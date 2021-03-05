@@ -56,5 +56,39 @@ public class Kemia {
             }
     }
    
+/*
+ 
+        //4.feladat
+        
+        int mennyi = 0;
+        
+        for (elemek elem : kemelemek) {
+            if(elem.getEv() == 0){
+            mennyi++;
+            }
+        }
+         System.out.println("4. feladat Felfedezése kszáma az ókorban: " + mennyi);
+         
+         
+        
+         //7.feladat
+         
+         int maxev = 0;
+       
+         
+         for (int i = 0; i < kemelemek.size()-1; i++) {
+             if(kemelemek.get(i).getEv() != 0){
+   
+            int kulonbseg = kemelemek.get(i+1).getEv() - kemelemek.get(i).getEv();
+             if(kulonbseg > maxev){
+             maxev = kulonbseg;
+             }
+            }
+        }
+            System.out.println("7. feladat: " +maxev + " év volt a leghosszabb időszak két elem felfedezése között.");
+
+*/
+
+
     
 }
