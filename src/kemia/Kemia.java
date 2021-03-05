@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Kemia {
 
@@ -24,8 +25,13 @@ public class Kemia {
             i++;
         }
         System.out.println("Elemek száma: " + elemek.size());
-        
-        
+      
+        System.out.println("5.Feladat");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Kérek egy vegyjelet: ");
+       String beker = sc.nextLine();
+        System.out.println("Bekért vegyjel: " + beker);
+
          HashMap<String, Integer> hs = new HashMap<>();
          
         for (Elem elem : elemek) {
