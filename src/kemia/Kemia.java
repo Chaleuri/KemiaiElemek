@@ -4,8 +4,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+<<<<<<< HEAD
 import java.util.Locale;
+=======
+import java.util.Map;
+>>>>>>> e6fe19d1b53184ecc0296173cb470b60cd576d3a
 import java.util.Scanner;
 
 public class Kemia {
@@ -23,6 +28,7 @@ public class Kemia {
             }
             i++;
         }
+<<<<<<< HEAD
         
         // 5. feladat
         
@@ -44,4 +50,73 @@ public class Kemia {
             }
         } while (!jo);
     }
+=======
+        System.out.println("Elemek száma: " + elemek.size());
+      
+        System.out.println("5.Feladat");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Kérek egy vegyjelet: ");
+       String beker = sc.nextLine();
+        System.out.println("Bekért vegyjel: " + beker);
+
+         HashMap<String, Integer> hs = new HashMap<>();
+         
+        for (Elem elem : elemek) {
+           String kulcs = elem.getEv();
+            if (!hs.containsKey(kulcs)) {
+                hs.put(kulcs, 1);
+            } else {
+                int szam = hs.get(kulcs);
+                hs.put(kulcs, szam + 1);
+            }
+            
+            
+        }
+           for (Map.Entry<String, Integer> entry : hs.entrySet()) {
+                String key = entry.getKey();
+                
+                Integer value = entry.getValue();
+                if (value>=3) {
+                     System.out.printf("Év: %s szám: %d \n", key,value);
+               }
+                 
+            }
+    }
+   
+/*
+ 
+        //4.feladat
+        
+        int mennyi = 0;
+        
+        for (elemek elem : kemelemek) {
+            if(elem.getEv() == 0){
+            mennyi++;
+            }
+        }
+         System.out.println("4. feladat Felfedezése kszáma az ókorban: " + mennyi);
+         
+         
+        
+         //7.feladat
+         
+         int maxev = 0;
+       
+         
+         for (int i = 0; i < kemelemek.size()-1; i++) {
+             if(kemelemek.get(i).getEv() != 0){
+   
+            int kulonbseg = kemelemek.get(i+1).getEv() - kemelemek.get(i).getEv();
+             if(kulonbseg > maxev){
+             maxev = kulonbseg;
+             }
+            }
+        }
+            System.out.println("7. feladat: " +maxev + " év volt a leghosszabb időszak két elem felfedezése között.");
+
+*/
+
+
+    
+>>>>>>> e6fe19d1b53184ecc0296173cb470b60cd576d3a
 }
