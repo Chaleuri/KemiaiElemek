@@ -32,5 +32,12 @@ public class Elem {
     public int getRendszam() {
         return rendszam;
     }
+
+    @Override
+    public String toString() {
+        return "Az elem vegyjele: " + vegyjel + "\nAz elem neve: " + elem + "\nRendszáma: " + rendszam + "\nFelfedezés éve: " + ev + "\nFelfedező: " + felfedezo;
+    }
+    
+    
     
 }

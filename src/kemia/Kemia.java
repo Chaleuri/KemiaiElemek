@@ -5,6 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
 
 public class Kemia {
 
@@ -21,6 +23,25 @@ public class Kemia {
             }
             i++;
         }
+        
+        // 5. feladat
+        
+        Scanner scn = new Scanner(System.in);
+        boolean jo = false;
+        
+        do {
+            
+            System.out.print("Kérek egy vegyjelet: ");
+            String bevitel = scn.nextLine();
+            
+            if(bevitel.length() <= 2 && !bevitel.isEmpty()){
+                for (Elem elem : elemek) {
+                    if(elem.getVegyjel().toLowerCase(Locale.ITALY).equals(bevitel.toLowerCase())){
+                        System.out.println(elem.toString());
+                        jo = true;
+                    }
+                }
+            }
+        } while (!jo);
     }
-    
 }
